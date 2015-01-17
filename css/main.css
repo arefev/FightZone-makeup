@@ -1,7 +1,7 @@
 /* MAIN CSS */
 body {
 	background:#171613;
-	font-family:"MF_R"
+	font-family:"MF_R";
 }
 
 /* GENERAL */
@@ -19,6 +19,10 @@ body {
 	.clear {
 		float:none;
 		clear:both;
+	}
+	
+	.hidden {
+		display:none;
 	}
 	
 	.font-bold { font-family:"MF_B" }
@@ -42,6 +46,7 @@ body {
 		position:fixed;
 		top:0;
 		left:0;
+		z-index:10;
 	}
 	
 	.header-logo {
@@ -57,6 +62,11 @@ body {
 	.header__number {
 		font-size:30px;
 		float:right;
+	}
+	
+	.header__fixed .header__number {
+		display:none;
+		color:#ef7d00;
 	}
 	
 	.callback-button {
@@ -90,6 +100,8 @@ body {
 		right:-8px;
 		top:1px;
 	}
+	
+	
 
 /* --END-- HEADER */
 	
@@ -141,4 +153,91 @@ body {
 		right:-22px;
 		top:1px;
 	}
+	
+	.top-menu-icon {
+		width:30px;
+		height:20px;
+		background:url("../images/menu-icon.png") no-repeat;
+		cursor:pointer;
+		float:right;
+		margin:22px 0 0 42px;
+		display:none;
+	}
 /* --END-- TOP MENU */
+
+/* MAIN SLIDER */
+	.main-slider {
+		min-height:766px;
+		background:url("../images/main-slider-bg.jpg") no-repeat;
+	}
+	
+	.main-slider__inner {
+		max-width:780px;
+		margin:0 auto;
+		padding:206px 44px 0 68px;
+		color:#FFF;
+	}
+	
+	.main-slider__right {
+		float:right;
+		font-size:48px;
+	}
+	
+	.main-slider__left {
+		float:left;
+		margin:84px 0 0;
+	}
+	
+	.main-slider__right__big-font {
+		font-size:60px;
+	}
+	
+	.bg-list {
+		margin:8px 0 0;
+	}
+	
+	.bg-list__item {
+		height:19px;
+		line-height:19px;
+		background:#ef7d00;
+		display:inline-block;
+		margin:2px 0 0 7px;
+		clear:both;
+	}
+	
+	.bg-list__item:before {
+		content:"";
+		float:left;
+		width:7px;
+		height:19px;
+		background:url("../images/bg-list-orange.png") no-repeat;
+		position:relative;
+		left:-7px;
+		top:0px;
+	}
+	
+	.bg-list__item:after {
+		content:"";
+		float:right;
+		width:7px;
+		height:19px;
+		background:url("../images/bg-list-orange.png") 0 -20px no-repeat;
+		position:relative;
+		left:7px;
+		top:0px;
+	}
+	
+	.bg-list__item_white {
+		color:#f86f00;
+		background:#FFF;
+	}
+	
+	.bg-list__item_white:before {
+		background:url("../images/bg-list-white.png") no-repeat;
+	}
+	
+	.bg-list__item_white:after {
+		background:url("../images/bg-list-white.png") 0 -20px no-repeat;
+	}
+	
+/* --END-- MAIN SLIDER */	
