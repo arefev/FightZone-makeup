@@ -1,9 +1,40 @@
 // MAIN JavaScript
 
+function runAnimationBlock(animationBlock) {
+	var animationTimeOut = 0,
+		animationTimePlus = 300;
+		
+	var animationClass = animationBlock.data("animation-class");
+	
+	animationBlock.find(".animation").each(function(index){
+		var element = $(this);
+		
+		setTimeout(function(){
+			element.addClass(animationClass);
+		}, animationTimeOut);
+		
+		animationTimeOut = animationTimeOut + animationTimePlus;
+	});
+}
+
 $(function(){
 	
-	
+	//runAnimationBlock($(".bg-list"));
 });
+
+
+$(window).scroll(function() {
+	// ANIMATATE
+	var windowHeight = $(window).height();
+	var topOfWindow = $(window).scrollTop() + windowHeight;
+    $('.animation-block').each(function(){
+        var imagePos = $(this).offset().top;
+		if (imagePos <= topOfWindow) {
+			runAnimationBlock($(this));
+		}
+	});
+});
+
 
 $(window).resize(function(){
 	centerPopup($(".b-popup"));
