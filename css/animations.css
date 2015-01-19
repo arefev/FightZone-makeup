@@ -200,12 +200,38 @@ slideRightFadeOut
 ==============================================
 */
 .slideRightFadeOut{
+	transition: all 0.3s ease-in;
 	-webkit-transition: all 0.3s ease-in;
-		-moz-transition: all 0.3s ease-in;
-		-o-transition: all 0.3s ease-in;
-		
+	-moz-transition: all 0.3s ease-in;
+	-o-transition: all 0.3s ease-in;
+	
 	opacity:0;
-	transform: translateX(250%);
+	
+	-moz-transform: translateX(250%);
+	-webkit-transform: translateX(250%);
+	-o-transform: translateX(250%);
+	transform: translateX(250%); 
+	-ms-transform: translateX(250%);
+}
+
+/*
+==============================================
+slideLeftFadeOut
+==============================================
+*/
+.slideLeftFadeOut{
+	transition: all 0.3s ease-in;
+	-webkit-transition: all 0.3s ease-in;
+	-moz-transition: all 0.3s ease-in;
+	-o-transition: all 0.3s ease-in;
+	
+	opacity:0;
+	
+	-moz-transform: translateX(-250%);
+	-webkit-transform: translateX(-250%);
+	-o-transform: translateX(-250%);
+	transform: translateX(-250%); 
+	-ms-transform: translateX(-250%);
 }
 
 

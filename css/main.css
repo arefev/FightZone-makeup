@@ -8,6 +8,7 @@ body {
 	.main {
 		width:100%;
 		margin:0 auto;
+		overflow:hidden;
 	}
 	
 	.main__center {
@@ -211,6 +212,7 @@ body {
 		position:absolute;
 		top:0;
 		left:0;
+		display:none;
 	}
 	
 	.main-slider__item {
@@ -240,6 +242,7 @@ body {
 		text-transform:uppercase; 
 		line-height:120%; 
 		text-shadow:0 0 10px #000;
+		display:none;
 	}
 	
 	.main-slider__text__item {

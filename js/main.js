@@ -31,22 +31,54 @@ $(function(){
 	runAnimationSection($(".header"));
 	runAnimationSection($(".main-slider"));
 	
-	$(".main-slider__arrow_right, .main-slider__arrow_left").click(function(){
+	/* 
+	MAIN SLIDER
+	отслеживаем события на клик стрелочек и пагинации
+	*/
+	$(".main-slider__arrow_right, .main-slider__arrow_left, .main-slider__nav__item").click(function(){
+		if ($(this).is(".main-slider__nav__item_active")) {
+			return false;
+		}
+	
 		var textBlock = $(".main-slider__text:visible");
-			
 			
 		if ($(this).is(".main-slider__arrow_right")) {
 			var textBlockNext = textBlock.next(".main-slider__text");
 			if (!textBlockNext.length) {
 				textBlockNext = $(".main-slider__text").first();
 			}
-		} else {
+		} else if ($(this).is(".main-slider__arrow_left")) {
 			var textBlockNext = textBlock.prev(".main-slider__text");
 			if (!textBlockNext.length) {
 				textBlockNext = $(".main-slider__text").last();
 			}
+		} else {
+			var indexNext = $(this).index(),
+				textBlockNext = $(".main-slider__text").eq(indexNext);
 		}
-			
+		
+		// Смена изображений и переключние пагинации
+		var index = textBlock.index(),
+			indexNext = textBlockNext.index(),
+			image = $(".main-slider__image").eq(index),
+			imageNext = $(".main-slider__image").eq(indexNext),
+			nav = $(".main-slider__nav__item").eq(index),
+			navNext = $(".main-slider__nav__item").eq(indexNext);
+		
+		image.fadeOut();
+		imageNext.fadeIn();
+		
+		// Если слайд содержит видео, прячем список тренировок и преимущества
+		if (imageNext.is(".main-slider__image_video")) {
+			$(".advantages, .main-slider__left").hide();
+		} else {
+			$(".advantages, .main-slider__left").show();
+		}
+		
+		nav.removeClass("main-slider__nav__item_active");
+		navNext.addClass("main-slider__nav__item_active");
+		
+		// управление анимацией текстовых блоков
 		textBlock.data({
 			"animation-class": "slideRightFadeOut",
 			"animation-timestart": 0
@@ -65,6 +97,7 @@ $(function(){
 			timeOut = 300 * size;
 	
 		runAnimationBlock(textBlock);
+		
 		setTimeout(function(){
 			textBlock.hide();
 			textBlockNext.show();
