@@ -51,16 +51,33 @@ body {
 		position:fixed;
 		top:0;
 		left:0;
+		z-index:20;
 	}
 	
 	.header-logo {
 		margin:6px 0 0;
 		float:left;
+		
+		transition: all .3s; 
+		-moz-transition: all .3s;
+		-webkit-transition: all .3s; 
+		-o-transition: all .3s;
+		border-radius: 100%; 
+		-moz-border-radius: 100%; 
+		-webkit-border-radius: 100%;
+	}
+	
+	.header-logo:hover {
+		-moz-transform: rotate(400grad); 
+		-webkit-transform: rotate(400grad); 
+		-o-transform: rotate(400grad); 
+		transform: rotate(400grad); 
+		-ms-transform: rotate(400grad); 
 	}
 	
 	.header__bottom {
 		position:relative;
-		margin-top:85px;
+		margin-top:80px;
 	}
 	
 	.header__number {
@@ -134,8 +151,6 @@ body {
 
 	.top-menu__item_active {
 		background:url("../images/top-menu-bg.png") 0 -127px repeat-x;
-		padding-left:6px;
-		padding-right:6px;
 	}
 
 	.top-menu__highlight:before {
@@ -169,28 +184,39 @@ body {
 	}
 /* --END-- TOP MENU */
 
+/* INDEX SECTION */
+	.index-section {
+		position:relative;
+	}
+
+	.index-section__next {
+		width:41px;
+		height:41px;
+		background:url("../images/section-arrow.png") no-repeat;
+		cursor:pointer;
+		position:absolute;
+		bottom:10px;
+		left:50%;
+		margin-left:-20px;
+	}
+/* INDEX SECTION */
+
 /* MAIN SLIDER */
 	.main-slider {
 		min-height:766px;
-		background:url("../images/main-slider-bg.jpg") no-repeat;
 		position:relative;
-	}
-	
-	.main-slider__inner {
-		/*max-width:780px;
-		margin:0 auto;
-		padding:206px 44px 0 68px;
-		color:#FFF;*/
 	}
 	
 	.main-slider__item {
+		min-height:766px;
 		position:relative;
+		background-repeat:no-repeat;
 	}
 	
 	.main-slider__item__inner {
 		max-width:780px;
 		margin:0 auto;
-		padding:206px 44px 0 68px;
+		padding:199px 44px 0 68px;
 		color:#FFF;
 	}
 	
@@ -201,11 +227,24 @@ body {
 	
 	.main-slider__left {
 		float:left;
-		margin:84px 0 0;
+		margin:95px 0 0;
 	}
 	
-	.main-slider__right__big-font {
+	
+	.main-slider__text {
+		text-transform:uppercase; 
+		line-height:120%; 
+		text-shadow:0 0 10px #000;
+	}
+	
+	.main-slider__text__item {
+		display:inline-block;
+	}
+	
+	.main-slider__text__big-font {
 		font-size:60px;
+		padding-left:100px; 
+		color:#f86f00;
 	}
 	
 	.main-slider__video-icon {
@@ -214,9 +253,9 @@ body {
 		background:url("../images/video-icon.png") no-repeat;
 		cursor:pointer;
 		position:absolute;
-		top:65%;
+		top:50%;
 		left:50%;
-		margin:0 0 0 -40px;
+		margin:-40px 0 0 -40px;
 	}
 	
 	.main-slider__arrow {
@@ -226,6 +265,15 @@ body {
 		position:absolute;
 		cursor:pointer;
 		top:50%;
+		margin-top:-24px;
+		
+		transition: all .3s; 
+		-moz-transition: all .3s;
+		-webkit-transition: all .3s; 
+		-o-transition: all .3s;
+		border-radius: 100%; 
+		-moz-border-radius: 100%; 
+		-webkit-border-radius: 100%;
 	}
 	
 	.main-slider__arrow_left {
@@ -236,6 +284,34 @@ body {
 	.main-slider__arrow_right {
 		background-position:-19px 0;
 		right:0;
+	}
+	
+	.main-slider__arrow:hover {
+		-moz-transform: scale(1.3); 
+		-webkit-transform: scale(1.3); 
+		-o-transform: scale(1.3);
+		transform: scale(1.3); 
+		-ms-transform: scale(1.3);
+	}
+	
+	.main-slider__nav {
+		position:absolute;
+		bottom:12px;
+		right:0;
+	}
+	
+	.main-slider__nav__item {
+		width:10px;
+		height:10px;
+		display:inline-block;
+		background:url("../images/slider-nav.png") no-repeat;
+		cursor:pointer;
+		margin:0 0 0 6px;
+	}
+	
+	.main-slider__nav__item_active {
+		background-position:-11px 0;
+		cursor:default;
 	}
 	
 	.bg-list {
@@ -294,5 +370,40 @@ body {
 	.bg-list__item_white:after {
 		background:url("../images/bg-list-white.png") 0 -20px no-repeat;
 	}
+	
+	/* ADVANTAGES */
+		.advantages {
+			list-style:none;
+			margin:76px 0 0;
+			padding:0;
+			color:#FFF;
+			padding:0 44px 0 68px;
+		}
+		
+		.advantages__item {
+			width:20%;
+			min-width:90px;
+			float:left;
+			text-align:center;
+		}
+		
+		.advantages__title {	
+			display:inline-block;
+			text-transform:uppercase;
+			font-size:14px;
+		}
+		
+		.advantages__title__inner {
+			width:100%;
+			height:38px;
+			display:table-cell;
+			vertical-align:middle;
+		}
+		
+		.advantages__desc {
+			margin:9px 0 0;
+			font-size:12px;
+		}
+	/* --END-- ADVANTAGES */
 	
 /* --END-- MAIN SLIDER */	

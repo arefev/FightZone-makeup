@@ -1,9 +1,19 @@
 // MAIN JavaScript
 
+function runAnimationSection(section) {
+	section.find(".animation-block").each(function(){
+		runAnimationBlock($(this));
+	});
+	
+}
+
 function runAnimationBlock(animationBlock) {
-	var animationTimeOut = 0,
+	var animationTimeOut = parseInt(animationBlock.data("animation-timestart")),
 		animationTimePlus = 300;
 		
+	if (isNaN(animationTimeOut))
+		animationTimeOut = 0;
+	
 	var animationClass = animationBlock.data("animation-class");
 	
 	animationBlock.find(".animation").each(function(index){
@@ -18,8 +28,8 @@ function runAnimationBlock(animationBlock) {
 }
 
 $(function(){
-	
-	//runAnimationBlock($(".bg-list"));
+	runAnimationSection($(".header"));
+	runAnimationSection($(".main-slider"));
 });
 
 

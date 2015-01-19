@@ -30,21 +30,19 @@
 		<header class="header">
 			<div class="header__fixed">
 				<div class="main__center">
-					<a href="#" title="Главная" class="header-logo"><img src="images/header-logo.png" alt=""/></a>
+					<a href="#" title="Главная" class="header-logo slideDown"><img src="images/header-logo.png" alt=""/></a>
 					
 					<div class="top-menu-icon"></div>
 					<div class="header__number">8 495 363 41 72</div>
 					
-					
-					
-					<ul class="top-menu font-italic">
-						<li class="top-menu__item top-menu__item_active"><span class="top-menu__highlight"><a href="#" title="Главная" class="link">Главная</a></span></li>
-						<li class="top-menu__item"><a href="#" title="Расписание" class="link">Расписание</a></li>
-						<li class="top-menu__item"><a href="#" title="Услуги и цены" class="link">Услуги и цены</a></li>
-						<li class="top-menu__item"><a href="#" title="Тренеры" class="link">Тренеры</a></li>
-						<li class="top-menu__item"><a href="#" title="Фото и видео" class="link">Фото и видео</a></li>
-						<li class="top-menu__item"><a href="#" title="Отзывы" class="link">Отзывы</a></li>
-						<li class="top-menu__item"><a href="#" title="Контакты" class="link">Контакты</a></li>
+					<ul class="top-menu font-italic animation-block" data-animation-class="slideDown">
+						<li class="top-menu__item top-menu__item_active animation"><span class="top-menu__highlight"><a href="#" title="Главная" class="link">Главная</a></span></li>
+						<li class="top-menu__item animation"><a href="#" title="Расписание" class="link">Расписание</a></li>
+						<li class="top-menu__item animation"><a href="#" title="Услуги и цены" class="link">Услуги и цены</a></li>
+						<li class="top-menu__item animation"><a href="#" title="Тренеры" class="link">Тренеры</a></li>
+						<li class="top-menu__item animation"><a href="#" title="Фото и видео" class="link">Фото и видео</a></li>
+						<li class="top-menu__item animation"><a href="#" title="Отзывы" class="link">Отзывы</a></li>
+						<li class="top-menu__item animation"><a href="#" title="Контакты" class="link">Контакты</a></li>
 						
 						<li class="clear"></li>
 					</ul> <!-- end .top-menu -->
@@ -53,9 +51,9 @@
 				</div>
 			</div> <!-- end .header__fixed -->
 			
-			<div class="header__bottom main__center">
-				<div class="callback-button"><span class="callback-button__border">Обратный звонок</span></div>
-				<div class="header__number">8 495 363 41 72</div>
+			<div class="header__bottom main__center animation-block" data-animation-class="slideLeft" data-animation-timestart="3000">
+				<div class="callback-button animation"><span class="callback-button__border">Обратный звонок</span></div>
+				<div class="header__number animation">8 495 363 41 72</div>
 				<div class="clear"></div>
 			</div> <!-- end .header__bottom -->
 		</header> <!-- end .header -->
@@ -63,21 +61,21 @@
 		<section class="index-section main-slider">
 			<div class="main-slider__inner">
 			
-				<div class="main-slider__item">
+				<div class="main-slider__item" style="background-image:url('images/main-slider-bg.jpg');">
 					<div class="main-slider__item__inner">
 						<div class="main-slider__right">
-							<div class="font-ibold" style="text-transform:uppercase; line-height:120%; text-shadow:0 0 10px #000">
-								Воспитай<br/>
-								<div style="padding-left:100px; color:#f86f00;" class="main-slider__right__big-font">Силу.<br/>
-								Скорость.<br/>
-								Характер.</div>
+							<div class="main-slider__text font-ibold animation-block" data-animation-class="slideLeft" data-animation-timestart="2000">
+								<span class="main-slider__text__item animation">Воспитай</span><br/>
+								<span class="main-slider__text__item main-slider__text__big-font animation">Силу.</span><br/>
+								<span class="main-slider__text__item main-slider__text__big-font animation">Скорость.</span><br/>
+								<span class="main-slider__text__item main-slider__text__big-font animation">Характер.</span>
 							</div>
 						</div>
 						
 						<div class="main-slider__left">
 							<div class="font-italic">
 								Тренировки
-								<div class="bg-list animation-block" data-animation-class="slideRight">
+								<div class="bg-list animation-block" data-animation-class="slideRight" data-animation-timestart="1000">
 									<span class="bg-list__item animation"><a href="#" title="Бокс">Бокс</a></span><br/>
 									<span class="bg-list__item bg-list__item_white animation"><a href="#" title="Muay Thai">Muay Thai</a></span><br/>
 									<span class="bg-list__item animation"><a href="#" title="Кикбоксинг">Кикбоксинг</a></span><br/>
@@ -87,10 +85,41 @@
 							</div>
 						</div>
 						
-						<div class="main-slider__video-icon"></div>
+						<!-- <div class="main-slider__video-icon"></div> -->
 						
 						<div class="clear"></div>
-					</div>
+					</div> <!-- end .main-slider__inner -->
+					
+					<ul class="advantages animation-block" data-animation-class="fadeIn" data-animation-timestart="3000">
+						<li class="advantages__item animation">
+							<div class="advantages__title"><span class="advantages__title__inner">Расположение</span></div>
+							<div class="advantages__icon"><img src="images/advantages-location.png" alt=""/></div>
+							<div class="advantages__desc">2 минуты от метро<br/>Курская, 600 м. от<br/>Cадового кольца</div>
+						</li>
+						<li class="advantages__item animation">
+							<div class="advantages__title"><span class="advantages__title__inner">Парковка</span></div>
+							<div class="advantages__icon"><img src="images/advantages-parking.png" alt=""/></div>
+							<div class="advantages__desc">Организованная<br/>обширная парковка</div>
+						</li>
+						<li class="advantages__item animation">
+							<div class="advantages__title"><span class="advantages__title__inner">Инвентарь</span></div>
+							<div class="advantages__icon"><img src="images/advantages-inventory.png" alt=""/></div>
+							<div class="advantages__desc">Новое<br/>специализированное<br/>оборудование от<br/>ROGUE FITNESS</div>
+						</li>
+						<li class="advantages__item animation">
+							<div class="advantages__title"><span class="advantages__title__inner">Атмосфера</span></div>
+							<div class="advantages__icon"><img src="images/advantages-ambiance.png" alt=""/></div>
+							<div class="advantages__desc">Драйв Энергетика<br/>Взаимоуважение<br/>Лучше один раз увидеть</div>
+						</li>
+						<li class="advantages__item animation">
+							<div class="advantages__title"><span class="advantages__title__inner">Комфортные<br/>условия</span></div>
+							<div class="advantages__icon"><img src="images/advantages-condition.png" alt=""/></div>
+							<div class="advantages__desc">Чистые мягкие полотенца<br/>Бесплатный Wi-Fi<br/>Фитобар<br/>Приветливый персонал<br/>Качественная музыка<br/>Красивые люди</div>
+						</li>
+						<li class="clear"></li>
+					</ul> <!-- end .advantages -->
+					
+					
 				</div> <!-- end .main-slider__item -->
 				
 			</div> <!-- end .main-slider__inner -->
@@ -98,6 +127,14 @@
 			<div class="main-slider__arrow main-slider__arrow_left"></div>
 			<div class="main-slider__arrow main-slider__arrow_right"></div>
 			
+			<div class="main-slider__nav">
+				<span class="main-slider__nav__item"></span>
+				<span class="main-slider__nav__item main-slider__nav__item_active"></span>
+				<span class="main-slider__nav__item"></span>
+				<span class="main-slider__nav__item"></span>
+			</div>
+			
+			<div class="index-section__next"></div>
 		</section> <!-- end .index-section.main-slider -->
 		
 		
