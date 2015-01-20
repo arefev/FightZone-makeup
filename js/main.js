@@ -119,6 +119,24 @@ $(window).scroll(function() {
 			runAnimationBlock($(this));
 		}
 	});
+	
+	$('.animationRun').each(function(){
+        var imagePos = $(this).offset().top,
+			animateName = $(this).data("animation-class"),
+			timeStart = $(this).data("animation-timestart"),
+			element = $(this);
+ 
+		if (imagePos < topOfWindow) {
+			if (!isNaN(timeStart)) {
+				setTimeout(function(){
+					element.addClass(animateName);
+					
+				}, timeStart);
+			} else {
+				$(this).addClass(animateName);
+			}
+		}
+	});
 });
 
 

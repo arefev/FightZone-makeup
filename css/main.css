@@ -25,13 +25,30 @@ body {
 		display:none;
 	}
 	
-	.animation {
+	.animation, .animationRun {
 		visibility:hidden;
 	}
 	
+	.font-reg { font-family:"MF_R" }
 	.font-bold { font-family:"MF_B" }
 	.font-ibold { font-family:"MF_BI" }
 	.font-italic { font-family:"MF_I" }
+	
+	h1, h2, h3, h4, h5, h6 {
+		font-weight:normal;
+	}
+	
+	b, strong {
+		font-family:"MF_B";
+		font-weight:normal;
+	}
+	
+	i { font-family:"MF_I" }
+	
+	img {
+		max-width:100%;
+	}
+	
 /* --END-- GENERAL */
 
 /* HEADER */
@@ -184,6 +201,19 @@ body {
 /* INDEX SECTION */
 	.index-section {
 		position:relative;
+	}
+	
+	.index-section__title {
+		margin:0;
+		font-size:24px;
+		text-transform:uppercase;
+		color:#313131;
+		text-align:center;
+		padding:31px 0 0;
+	}
+	
+	.index-section__title_white {
+		color:#FFF;
 	}
 
 	.index-section__next {
@@ -386,7 +416,7 @@ body {
 			margin:76px 0 0;
 			padding:0;
 			color:#FFF;
-			padding:0 44px 70px 68px;
+			padding:0 44px 60px 68px;
 		}
 		
 		.advantages__item {
@@ -416,3 +446,94 @@ body {
 	/* --END-- ADVANTAGES */
 	
 /* --END-- MAIN SLIDER */	
+
+/* FIGHTING STARS */
+	.fighting-stars {
+		min-height:768px;
+		background:url("../images/fighting-stars-bg.jpg") no-repeat;
+		color:#FFF;
+	}
+	
+	.fighting-stars__main {
+		width:177px;
+		position:relative;
+		margin:25px auto 0;
+	}
+	
+	.fighting-stars__main__name {
+		font-size:48px;
+		text-transform:uppercase;
+		line-height:90%;
+		position:absolute;
+		left:224px;
+		top:0;
+	}
+	
+	.fighting-stars__main__firstname {
+		display:inline-block;
+	}
+	
+	.fighting-stars__main__lastname {
+		color:#ef7d00;
+		display:inline-block;
+	}
+	
+	.fighting-stars__main__status {
+		font-size:24px;
+		text-transform:none;
+		margin:8px 0 0;
+		white-space:nowrap;
+	}
+	
+	.fighting-stars__register {
+		width:100%;
+		text-align:center;
+		position:absolute;
+		left:0;
+		bottom:67px;
+	}
+	
+	.fighting-stars__register__link {
+		color:#FFF;
+		text-decoration:none;
+		font-size:15px;
+		display:inline-block;
+		border:5px solid #ef7d00;
+		border-radius:3px;
+		padding:8px 50px;
+	}
+	
+	.stars-list {
+		max-height:450px;
+		list-style:none;
+		margin:3px 0 0 -8px;
+		padding:0;
+		overflow:hidden;
+	}
+	
+	.stars-list__item {
+		max-width:136px;
+		float:left;
+		margin:0 0 200px 5px;
+	}
+	
+	.stars-list__photo {
+		display:block;
+		margin:0 auto;
+	}
+	
+	.stars-list__name {
+		height:31px;
+		background:url("../images/fighting-stars-name-bg.png") no-repeat;
+		margin:5px 0 0 3px;
+		padding:3px 0 0 14px;
+		font-size:12px;
+		line-height:100%;
+	}
+	
+	.stars-list__desc {
+		max-width:122px;
+		font-size:12px;
+		margin:5px 0 0 3px;
+	}
+/* --END-- FIGHTING STARS */
