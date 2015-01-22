@@ -1,5 +1,7 @@
 // MAIN JavaScript
 
+var windowMaxWidth = 980;
+
 function runAnimationSection(section) {
 	section.find(".animation-block").each(function(){
 		runAnimationBlock($(this));
@@ -28,12 +30,13 @@ function runAnimationBlock(animationBlock) {
 }
 
 $(function(){
-	runAnimationSection($(".header"));
+	runAnimationBlock($(".top-menu"));
+	runAnimationBlock($(".header__bottom"));
 	runAnimationSection($(".main-slider"));
 	
 	/* 
 	MAIN SLIDER
-	îòñëåæèâàåì ñîáûòèÿ íà êëèê ñòðåëî÷åê è ïàãèíàöèè
+	Ð¾Ñ‚ÑÐ»ÐµÐ¶Ð¸Ð²Ð°ÐµÐ¼ ÑÐ¾Ð±Ñ‹Ñ‚Ð¸Ñ Ð½Ð° ÐºÐ»Ð¸Ðº ÑÑ‚Ñ€ÐµÐ»Ð¾Ñ‡ÐµÐº Ð¸ Ð¿Ð°Ð³Ð¸Ð½Ð°Ñ†Ð¸Ð¸
 	*/
 	$(".main-slider__arrow_right, .main-slider__arrow_left, .main-slider__nav__item").click(function(){
 		if ($(this).is(".main-slider__nav__item_active")) {
@@ -57,7 +60,7 @@ $(function(){
 				textBlockNext = $(".main-slider__text").eq(indexNext);
 		}
 		
-		// Ñìåíà èçîáðàæåíèé è ïåðåêëþ÷íèå ïàãèíàöèè
+		// ÑÐ¼ÐµÐ½Ð° Ð¸Ð·Ð¾Ð±Ñ€Ð°Ð¶ÐµÐ½Ð¸Ð¹ Ð¸ Ð¿ÐµÑ€ÐµÐºÐ»ÑŽÑ‡Ð½Ð¸Ðµ Ð¿Ð°Ð³Ð¸Ð½Ð°Ñ†Ð¸Ð¸
 		var index = textBlock.index(),
 			indexNext = textBlockNext.index(),
 			image = $(".main-slider__image").eq(index),
@@ -68,7 +71,7 @@ $(function(){
 		image.fadeOut();
 		imageNext.fadeIn();
 		
-		// Åñëè ñëàéä ñîäåðæèò âèäåî, ïðÿ÷åì ñïèñîê òðåíèðîâîê è ïðåèìóùåñòâà
+		// Ð•ÑÐ»Ð¸ ÑÐ»Ð°Ð¹Ð´ ÑÐ¾Ð´ÐµÑ€Ð¶Ð¸Ñ‚ Ð²Ð¸Ð´ÐµÐ¾, Ð¿Ñ€ÑÑ‡ÐµÐ¼ ÑÐ¿Ð¸ÑÐ¾Ðº Ñ‚Ñ€ÐµÐ½Ð¸Ñ€Ð¾Ð²Ð¾Ðº Ð¸ Ð¿Ñ€ÐµÐ¸Ð¼ÑƒÑ‰ÐµÑÑ‚Ð²Ð°
 		if (imageNext.is(".main-slider__image_video")) {
 			$(".advantages, .main-slider__left").hide();
 		} else {
@@ -78,7 +81,7 @@ $(function(){
 		nav.removeClass("main-slider__nav__item_active");
 		navNext.addClass("main-slider__nav__item_active");
 		
-		// óïðàâëåíèå àíèìàöèåé òåêñòîâûõ áëîêîâ
+		// ÑƒÐ¿Ñ€Ð°Ð²Ð»ÐµÐ½Ð¸Ðµ Ð°Ð½Ð¸Ð¼Ð°Ñ†Ð¸ÐµÐ¹ Ñ‚ÐµÐºÑÑ‚Ð¾Ð²Ñ‹Ñ… Ð±Ð»Ð¾ÐºÐ¾Ð²
 		textBlock.data({
 			"animation-class": "slideRightFadeOut",
 			"animation-timestart": 0
@@ -106,6 +109,41 @@ $(function(){
 		}, timeOut);
 		
 	});
+	
+	/*
+	Ð Ð°ÑÐ¿Ð¸ÑÐ°Ð½Ð¸Ðµ Ñ‚Ñ€ÐµÐ½Ð¸Ñ€Ð¾Ð²Ð¾Ðº
+	ÐŸÑ€Ð¸ Ð½Ð°Ð²ÐµÐ´ÐµÐ½Ð¸Ð¸ Ð½Ð° Ð¾Ñ€Ð°Ð½Ð¶ÐµÐ²ÑƒÑŽ Ð¿Ð»Ð°ÑˆÐºÑƒ Ð² Ñ‚Ð°Ð±Ð»Ð¸Ñ†Ñƒ, Ð½ÑƒÐ¶Ð½Ð¾ Ð¿Ð¾ÐºÐ°Ð·Ñ‹Ð²Ð°Ñ‚ÑŒ Ð¸Ð½Ñ„Ð¾Ñ€Ð¼Ð°Ñ†Ð¸ÑŽ Ð¾ Ñ‚Ñ€ÐµÐ½ÐµÑ€Ðµ
+	ÐÐµÐ¾Ð±Ñ…Ð¾Ð´Ð¸Ð¼Ð¾ Ñ€Ð°ÑÑÑ‡Ð¸Ñ‚Ð°Ñ‚ÑŒ Ð¿Ð¾Ð»Ð¾Ð¶ÐµÐ½Ð¸Ðµ Ð¿Ð¾Ð¿Ð°Ð¿Ð° Ñ Ð¸Ð½Ñ„Ð¾Ñ€Ð¼Ð°Ñ†Ð¸ÐµÐ¹: ÑÐ²ÐµÑ€Ñ…Ñƒ, ÑÐ½Ð¸Ð·Ñƒ, ÑÐ»ÐµÐ²Ð°, ÑÐ¿Ñ€Ð°Ð²Ð°.
+	*/
+	$(".schedule-table__item").hover(function(){
+		showSchedulePopup($(this));
+	}, function (){
+		var popup = $(this).find(".schedule-table__info");
+		popup.removeClass().addClass("schedule-table__info").hide();
+	});
+	
+	$(".schedule-table__info__close").click(function(){
+		var popup = $(this).closest(".schedule-table__info");
+		popup.hide();
+	});
+	
+	$(".schedule-table__item").click(function(e){
+		if ($(e.target).is(".schedule-table__info__close")) {
+			var popup = $(e.target).closest(".schedule-table__info");
+			popup.hide();
+		} else {
+			showSchedulePopup($(this));
+		}
+	});
+	
+	/*$(".index-section").each(function(){
+		var minHeight = 766,
+			windowHeight = $(window).height();
+			
+		if (windowHeight > minHeight) {
+			$(this).height(windowHeight);
+		}
+	});*/
 });
 
 
@@ -144,6 +182,40 @@ $(window).resize(function(){
 	centerPopup($(".b-popup"));
 	
 });
+
+function showSchedulePopup(item) {
+	var table = item.closest(".schedule-table"),
+		td = item.closest("td"),
+		itemTop = td.position().top,
+		itemLeft = td.position().left,
+		vertPos = "",
+		horPos = "",
+		popup = item.find(".schedule-table__info"),
+		popupPosition = "",
+		popupHeight = 198,
+		popupWidth = 462,
+		windowWidth = $(window).width();
+		
+	if (windowWidth < 480) {
+		popup.show();
+		
+	} else {
+		if (itemTop >= popupHeight) {
+			vertPos = "top";
+		} else {
+			vertPos = "bottom";
+		}
+		
+		if (itemLeft >= popupWidth) {
+			horPos = "left";
+		} else {
+			horPos = "right";
+		}
+		
+		popupPosition = horPos + "-" + vertPos;
+		popup.addClass("schedule-table__info_" + popupPosition).show();
+	}
+}
 
 function showPopup(element)
 {

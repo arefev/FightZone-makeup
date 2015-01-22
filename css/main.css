@@ -2,6 +2,7 @@
 body {
 	background:#171613;
 	font-family:"MF_R";
+	color:#232323;
 }
 
 /* GENERAL */
@@ -90,8 +91,11 @@ body {
 	}
 	
 	.header__bottom {
-		position:relative;
-		margin-top:80px;
+		width:100%;
+		position:absolute;
+		top:80px;
+		color:#FFF;
+		z-index:5;
 	}
 	
 	.header__number {
@@ -450,7 +454,7 @@ body {
 /* FIGHTING STARS */
 	.fighting-stars {
 		min-height:768px;
-		background:url("../images/fighting-stars-bg.jpg") no-repeat;
+		background:url("../images/fighting-stars-bg.jpg") center top no-repeat;
 		color:#FFF;
 	}
 	
@@ -537,3 +541,348 @@ body {
 		margin:5px 0 0 3px;
 	}
 /* --END-- FIGHTING STARS */
+
+/* SCHEDULE */
+	.schedule {
+		min-height:768px;
+		background:url("../images/schedule-bg.jpg") center 0 no-repeat #F4F4F4;
+	}
+	
+	.schedule-table {
+		text-align:center;
+		margin:24px 30px 0 0;
+		position:relative;
+	}
+	
+	.schedule-table table {
+		width:100%;
+	}
+	
+	.schedule-table td {
+		width:130px;
+		height:37px;
+		vertical-align:middle;
+		border-top:1px solid #b6b6b6;
+		position:relative;
+		line-height:90%;
+	}
+	
+	.schedule-table td:hover {
+		z-index:8;
+	}
+	
+	.schedule-table td:first-child {
+		width:57px;
+		padding-left:29px;
+		text-align:left;
+		font-size:18px;
+		border-top:0;
+	}
+	
+	.schedule-table tbody tr:first-child td {
+		border-top:0;
+	}
+	
+	.schedule-table thead td {
+		font-size:18px;
+		border-top:0;
+	}
+	
+	.schedule-table__text {
+		height:38px;
+		position:relative;
+		z-index:5;
+		color:#FFF;
+		margin:0 0 -5px;
+		overflow:hidden;
+		
+	}
+	
+	.schedule-table__cell-bg {
+		width:100%;
+		max-width:127px;
+		height:38px;
+		position:absolute;
+		top:-1px;
+	}
+	
+	.schedule-table__cell-bg__inner {
+		width:100%;
+		max-width:87px;
+		height:38px;
+		background:url("../images/hor-list-item-bg.png") 0 -195px repeat-x;
+		position:relative;
+		padding:0 7px;
+		margin:0 13px;
+	}
+
+	
+	.schedule-table__cell-bg__inner:before {
+		content:"";
+		width:13px;
+		height:38px;
+		background:url("../images/hor-list-item-bg.png") 0 -234px no-repeat;
+		position:absolute;
+		left:-13px;
+		top:0;
+	}
+	
+	.schedule-table__cell-bg__inner:after {
+		content:"";
+		width:13px;
+		height:38px;
+		background:url("../images/hor-list-item-bg.png") 0 -273px no-repeat;
+		position:absolute;
+		right:-13px;
+		top:0;
+	}
+	
+	.schedule-table__icon {
+		display:none;
+	}
+	
+	/* SCHEDULE TABLE INFO */
+		.schedule-table__info {
+			width:342px;
+			padding:0 61px 0 59px;
+			position:absolute;
+			display:none;
+		}
+		
+		.schedule-table__info_right-top {
+			bottom:38px;
+			left:11px;
+		}
+		
+		.schedule-table__info_left-top {
+			bottom:38px;
+			right:-60px;
+		}
+		
+		.schedule-table__info_right-bottom {
+			top:37px;
+			left:-56px;
+		}
+		
+		.schedule-table__info_left-bottom {
+			top:37px;
+			right:9px;
+		}
+		
+		.schedule-table__info__inner {
+			height:192px;
+			border-top:3px solid #f7a600;
+			border-bottom:3px solid #f7a600;
+			background:#FFF;
+		}
+		
+		.schedule-table__info__inner:before {
+			content:"";
+			width:59px;
+			height:198px;
+			background:url("../images/schedule-info-bg-big.png") 0 -199px no-repeat;
+			position:absolute;
+			left:0;
+			top:0;
+		}
+		
+		.schedule-table__info__inner:after {
+			content:"";
+			width:61px;
+			height:198px;
+			background:url("../images/schedule-info-bg-big.png") left top no-repeat;
+			position:absolute;
+			right:0;
+			top:0;
+		}
+		
+		.schedule-table__info__photo {
+			height:192px;
+			overflow:hidden;
+			position:absolute;
+			left:0;
+		}
+		
+		.schedule-table__info__small-photo {
+			height:84px;
+			overflow:hidden;
+			position:absolute;
+			left:-3px;
+			display:none;
+		}
+		
+		.schedule-table__info__text-block {
+			width:100%;
+			max-width:228px;
+			float:right;
+			text-align:center;
+			padding:13px 0 0;
+			line-height:120%;
+			position:relative;
+			z-index:10;
+			font-size:14px;
+		}
+		
+		.schedule-table__info__title {
+			font-size:18px;
+			padding-left:40px;
+			margin:0 0 12px;
+		}
+		
+		.schedule-table__info__type {
+			display:none;
+			margin:5px 0 0;
+		}
+		
+		.schedule-table__info__about {
+			padding:0 30px;
+		}
+		
+		.schedule-table__info__weight {
+			margin:19px 0 0;
+		}
+		
+		.schedule-table__info .link {
+			color:#ef7d00;
+		}
+		
+		.schedule-table__info__link-border {
+			position:relative;
+			padding:0 8px;
+			margin:14px 20px 0 -20px;
+		}
+		
+		.schedule-table__info__link-border .link {
+			height:18px;
+			line-height:18px;
+			display:block;
+			color:inherit;
+			border-top:2px solid #f58420;
+			border-bottom:2px solid #f58420;
+			text-decoration:none;
+		}
+		
+		.schedule-table__info__link-border .link:before {
+			content:"";
+			width:8px;
+			height:22px;
+			background:url("../images/schedule-info-link-border.png") 0 -23px no-repeat;
+			position:absolute;
+			left:0;
+			top:0;
+		}
+		
+		.schedule-table__info__link-border .link:after {
+			content:"";
+			width:8px;
+			height:22px;
+			background:url("../images/schedule-info-link-border.png") left top no-repeat;
+			position:absolute;
+			right:0;
+			top:0;
+		}
+		
+		.schedule-table__info__close {
+			width:12px;
+			height:13px;
+			background:url("../images/close.png") no-repeat;
+			position:absolute;
+			top:10px;
+			right:16px;
+			cursor:pointer;
+			display:none;
+		}
+	/* --END-- SCHEDULE TABLE INFO */
+	
+	.schedule .hor-list { margin-top:4px; }
+	.schedule .hor-list_training-type { margin-top:22px; }
+	
+	/* HORIZONTAL LIST */
+		.hor-list {
+			list-style:none;
+			margin:0;
+			padding:0;
+			font-size:15px;
+		}
+		
+		.hor-list__item {
+			margin:0 3px 0 13px;
+			float:left;
+			position:relative;
+			cursor:pointer;
+		}
+		
+		.hor-list__item_active {
+			margin-left:12px;
+			cursor:default;
+		}
+		
+		.hor-list__item_noactive { cursor:default; }
+		
+		.hor-list__item_width_1 { min-width:125px; }
+		.hor-list__item_width_2 { min-width:92px; }
+		.hor-list__item_width_3 { min-width:104px; }
+		.hor-list__item_width_4 { min-width:130px; }
+		.hor-list__item_width_5 { min-width:278px; }
+		
+		.hor-list__bg {
+			height:39px;
+			background:url("../images/hor-list-item-bg.png") 0 -39px repeat-x;
+			position:relative;
+			text-align:center;
+		}
+		
+		.hor-list__bg:before {
+			content:"";
+			width:13px;
+			height:39px;
+			background:url("../images/hor-list-item-bg.png") 0 -78px no-repeat;
+			position:absolute;
+			left:-13px;
+		}
+		
+		.hor-list__bg:after {
+			content:"";
+			width:13px;
+			height:39px;
+			background:url("../images/hor-list-item-bg.png") left top no-repeat;
+			position:absolute;
+			right:-13px;
+			top:0;
+		}
+		
+		.hor-list__item_last .hor-list__bg:after {
+			background-position:0 -117px;
+		}
+		
+		.hor-list__item_active .hor-list__bg {
+			background-position:0 -195px;
+			color:#FFF;
+		}
+		
+		.hor-list__item_active .hor-list__bg:before {
+			background-position:0 -234px;
+		}
+		
+		.hor-list__item_active .hor-list__bg:after {
+			background-position:0 -156px;
+		}
+		
+		.hor-list__item_last.hor-list__item_active .hor-list__bg:after {
+			background-position:0 -273px;
+		}
+		
+		.hor-list__text {
+			display:inline-block;
+			/* padding:0 8px; */
+			line-height:100%;
+		}
+		
+		.hor-list__cell {
+			height:39px;
+			display:table-cell;
+			vertical-align:middle;
+			text-align:left;
+		}
+	/* --END-- HORIZONTAL LIST */
+/* --END-- SCHEDULE */

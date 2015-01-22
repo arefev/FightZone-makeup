@@ -1,5 +1,34 @@
 /* WIDTH */
 
+@media screen and (max-width: 979px) {
+	/* SCHEDULE */
+		.schedule-table {
+			margin:24px 0 0 0;
+		}
+		
+		.schedule-table td:first-child {
+			padding-left:0;
+			border-top:1px solid #b6b6b6;
+		}
+		
+		.schedule-table tr:first-child td:first-child {
+			border-top:0;
+		}
+		
+		.hor-list_training-type, .hor-list_teachers {
+			display:none;
+		}
+		
+		.schedule-table__icon {
+			display:inline;
+		}
+		
+		.schedule-table__text, .schedule-table__cell-bg {
+			display:none;
+		}
+	/* --END-- SCHEDULE */
+}
+
 @media screen and (max-width: 759px) {
 	.main__center {
 		max-width:980px;
@@ -19,8 +48,7 @@
 		}
 		
 		.header__bottom {
-			position:relative;
-			margin-top:70px;
+			top:70px;
 		}
 		
 		.header__bottom .header__number {
@@ -124,7 +152,60 @@
 		/* --END-- ADVANTAGES */
 	/* --END-- MAIN SLIDER */
 	
-	
+	/* SCHEDULE */
+		.schedule-table td {
+			position:static;
+		}
+		/* SCHEDULE TABLE INFO */
+			.schedule-table__info {
+				width:375px;
+				padding:0 27px;
+				left:3%;
+				margin-top:-2px;
+			}
+			
+			.schedule-table__info__inner {
+				height:84px;
+			}
+			
+			.schedule-table__info__inner:before {
+				width:27px;
+				height:90px;
+				background:url("../images/schedule-info-bg-small.png") 0 -91px no-repeat;
+			}
+			
+			.schedule-table__info__inner:after {
+				width:27px;
+				height:90px;
+				background:url("../images/schedule-info-bg-small.png") left top no-repeat;
+			}
+			
+			.schedule-table__info__about, 
+			.schedule-table__info__weight,
+			.schedule-table__info__photo {
+				display:none;
+			}
+			
+			.schedule-table__info__small-photo,
+			.schedule-table__info__type,
+			.schedule-table__info__close {
+				display:block;
+			}
+			
+			.schedule-table__info__text-block {
+				padding:10px 0;
+			}
+			
+			.schedule-table__info__title {
+				margin-bottom:8px;
+			}
+			
+			.schedule-table__info__link-border {
+				width:80%;
+				margin:0 auto;
+			}
+		/* --END-- SCHEDULE TABLE INFO */
+	/* --END-- SCHEDULE */
 }
 
 @media screen and (max-width: 369px) {
@@ -186,4 +267,35 @@
 			margin-left:8px;
 		}
 	/* --END-- FIGHTING STARS */
+	
+	/* SCHEDULE */
+		/* SCHEDULE TABLE INFO */
+			.schedule-table__info {
+				width:226px;
+				left:3%;
+				margin-top:-2px;
+			}
+			
+			.schedule-table__info__inner {
+				height:84px;
+			}
+			
+			.schedule-table__info__small-photo {
+				display:none;
+			}
+			
+			.schedule-table__info__text-block {
+				float:none;
+				margin:0;
+			}
+			
+			.schedule-table__info__title {
+				padding:0;
+			}
+			
+			.schedule-table__info__link-border {
+				margin-left:0;
+			}
+		/* --END-- SCHEDULE TABLE INFO */
+	/* --END-- SCHEDULE */
 }
