@@ -102,6 +102,23 @@
 			margin-left:19px;
 		}
 	/* --END-- FIGHTING STARS */
+	
+	/* TEACHERS */
+		.teachers__right {
+			width:202px;
+			margin-right:39px;
+		}
+		
+		.teachers__photo {
+			left:8%;
+		}
+		
+		.teachers__schedule__list {
+			width:356px;
+			margin-right:0;
+			float:right;
+		}
+	/* --END-- TEACHERS */
 }
 
 
@@ -206,6 +223,8 @@
 			}
 		/* --END-- SCHEDULE TABLE INFO */
 	/* --END-- SCHEDULE */
+	
+	
 }
 
 @media screen and (max-width: 369px) {
@@ -298,4 +317,18 @@
 			}
 		/* --END-- SCHEDULE TABLE INFO */
 	/* --END-- SCHEDULE */
+	
+	/* TEACHERS */
+		.teachers__right {
+			margin-right:26px;
+		}
+		
+		.teachers__schedule__list {
+			width:100%;
+		}
+		
+		.teachers__schedule__item {
+			min-width:138px;
+		}
+	/* --END-- TEACHERS */
 }

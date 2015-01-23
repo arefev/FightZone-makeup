@@ -144,6 +144,40 @@ $(function(){
 			$(this).height(windowHeight);
 		}
 	});*/
+	
+	/* FADE-IN SLIDER */
+	$(".fade-in-slider__arrow").click(function(){
+		var slider = $(this).closest(".fade-in-slider"),
+			itemActive = slider.find(".fade-in-slider__item:visible"),
+			itemNext = itemActive.next(".fade-in-slider__item");
+		
+		slider.stop();
+		
+		if (slider.is(".active")) {
+			return false;
+		}
+		
+		slider.addClass("active");
+		itemActive.find(".animation, .animationRun, .animation-block")
+				  .removeClass("animation animationRun animation-block slideLeft opacity rotate3DFadeIn");
+		
+		if (!itemNext.length) {
+			itemNext = slider.find(".fade-in-slider__item").first();
+		}	
+		
+		if ($(this).is(".fade-in-slider__arrow_left")) {
+			itemNext = itemActive.prev(".fade-in-slider__item");
+			if (!itemNext.length) {
+				itemNext = slider.find(".fade-in-slider__item").last();
+			}
+		}
+		
+		itemActive.fadeOut();
+		itemNext.fadeIn(function(){
+			slider.removeClass("active");
+		});
+	});
+	/* --END-- FADE-IN SLIDER */
 });
 
 
