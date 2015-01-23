@@ -27,6 +27,29 @@
 			display:none;
 		}
 	/* --END-- SCHEDULE */
+	
+	/* SERVICES */
+		.services-calc__item,
+		.services-calc__advice,
+		.services-calc__personal-link,
+		.services-calc__buttons br {
+			display:none;
+		}
+		
+		.services-special {
+			margin-top:49px;
+		}
+		
+		.services-special__item {
+			float:none;
+			margin:8px auto 0;
+		}
+		
+		.services-special__item:first-child {
+			margin-left:auto;
+			margin-top:0;
+		}
+	/* --END-- SERVICES */
 }
 
 @media screen and (max-width: 759px) {
@@ -66,6 +89,10 @@
 		}
 		
 		.top-menu-icon {
+			display:block;
+		}
+		
+		.top-menu_hidden .top-menu {
 			display:block;
 		}
 	/* --END-- TOP MENU */
@@ -331,4 +358,17 @@
 			min-width:138px;
 		}
 	/* --END-- TEACHERS */
+}
+
+@media screen and (max-width: 320px) {
+	/* SERVICES */
+		.services-special__item {
+			width:297px;
+			height:136px;
+		}
+		
+		.services-calc__ask-price {
+			width:297px;
+		}
+	/* --END-- SERVICES */
 }

@@ -34,6 +34,44 @@ $(function(){
 	runAnimationBlock($(".header__bottom"));
 	runAnimationSection($(".main-slider"));
 	
+	/* TOP MENU */
+	var menu = $(".top-menu").clone();
+	menu.removeClass(".animation-block")
+		.find(".animation")
+		.removeClass("animation");
+		
+	$(".top-menu_hidden").prepend(menu);
+	
+	$(".top-menu-icon, .top-menu__close").click(function(){
+		if ($(".top-menu_hidden").is(":visible")) {
+			var top = $(".main__inner").data("top"),	
+				menu = $(".top-menu");
+			
+			$(".top-menu_hidden").hide();
+			$(".header__fixed").removeClass("header__fixed_margin");
+			
+			$(".main__inner")
+				.removeClass("main__inner_fixed")
+				.css("top", "auto");
+				
+			$("html, body").scrollTop(top);
+			
+		} else {
+			var scrollTop = $(window).scrollTop(),
+				menu = $(".top-menu");
+			
+			$(".main__inner")
+				.addClass("main__inner_fixed")
+				.css("top", -scrollTop)
+				.data("top", scrollTop);
+				
+			$(".top-menu_hidden").show();
+			$(".header__fixed").addClass("header__fixed_margin");
+			$("html, body").scrollTop(0);
+		}
+	});
+	/* --END-- TOP MENU */
+	
 	/* 
 	MAIN SLIDER
 	отслеживаем события на клик стрелочек и пагинации
@@ -178,6 +216,27 @@ $(function(){
 		});
 	});
 	/* --END-- FADE-IN SLIDER */
+	
+	
+	/* SERVICES */
+	$(".services-calc .hor-list__item:not(.hor-list__item_noactive)").click(function(){
+		var parent = $(this).closest(".services-calc__item"),
+			parentNext = parent.next(".services-calc__item"),
+			activeItem = parent.find(".hor-list__item_active"),
+			numNext = parentNext.find(".hor-list__item_num");
+			
+		if (parent.is(".services-calc__item_noactive")) {
+			return false;
+		}
+		
+		numNext.addClass("hor-list__item_num_active");
+			
+		parentNext.removeClass("services-calc__item_noactive");
+			
+		activeItem.removeClass("hor-list__item_active");
+		$(this).addClass("hor-list__item_active");
+	});
+	/* --END-- SERVICES */
 });
 
 
