@@ -116,6 +116,17 @@
 			right:12px;
 		}
 	/* --END-- MAIN SLIDER */
+	
+	/* CONTACTS */
+		.contacts__left {
+			float:none;
+			margin:0 auto;
+		}
+		
+		.contacts__right {
+			display:none;
+		}
+	/* --END-- CONTACTS */
 }
 
 @media screen and (max-width: 570px) { 
@@ -146,6 +157,55 @@
 			float:right;
 		}
 	/* --END-- TEACHERS */
+	
+	/* REVIEWS */
+		.reviews__left {	
+			margin:106px 0 0 0;
+		}
+		
+		.reviews__name {
+			font-size:36px;
+		}
+	/* --END-- REVIEWS */
+	
+	/* BLOG */
+		.blog__left {	
+			width:100%;
+			float:none;
+			margin:84px 0 0 0;
+			text-align:center;
+		}
+		
+		.blog__photo {
+			width:38%;
+		}
+		
+		.blog__right {
+			width:100%;
+			float:right;
+			position:relative;
+			text-align:center;
+		}
+		
+		.blog__item__title {
+			margin:16px 0 10px;
+		}
+		
+		.blog__item__text {
+			display:none
+		}
+		
+		.blog__item__text_small {
+			display:block;
+		}
+		
+		.blog__item__link {
+			display:block;
+			position:relative;
+			left:auto;
+			margin:20px auto 0;
+		}
+	/* --END-- BLOG */
 }
 
 
@@ -358,6 +418,36 @@
 			min-width:138px;
 		}
 	/* --END-- TEACHERS */
+	
+	/* REVIEWS */
+		.reviews__left {	
+			margin:70px 0 0 0;
+			float:none;
+			text-align:center;
+			width:100%;
+		}
+		
+		.reviews__photo {
+			width:50%;
+		}
+		
+		.reviews__right {
+			width:100%;
+			float:none;
+			margin:10px 0 0 0;
+			text-align:center;
+		}
+		
+		.reviews__name {
+			font-size:20px;
+		}
+	/* --END-- REVIEWS */
+	
+	/* BLOG */
+		.blog__item__link {
+			width:90%;
+		}
+	/* --END-- BLOG */
 }
 
 @media screen and (max-width: 320px) {
