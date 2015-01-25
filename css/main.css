@@ -1581,3 +1581,40 @@ body {
 		right:0;
 	}
 /* --END-- FOOTER */
+
+
+/* PHOTO VIDEO */
+	.photo-video {
+		min-height:768px;
+		background:url("../images/photo-video-bg.jpg") center top no-repeat #161616;
+		color:#FFF;
+	}
+	
+	.r-sections {
+		width:590px;
+		height:89px;
+		overflow:hidden;
+		position:relative;
+		margin:17px auto 0;
+		padding:0 0 4px;
+		background:url("../images/r-sections-bg.png") center bottom no-repeat;
+	}
+	
+	.r-sections__circle {
+		width:922px;
+		height:922px;
+		position:absolute;
+		left:50%;
+		bottom:4px;
+		margin:0 0 0 -461px;
+	}
+	
+	.r-sections__item {
+		width:150px;
+		text-align:center;
+		font-size:14px;
+		cursor:pointer;
+		position:absolute;
+		bottom:0;
+	}
+/* --END-- PHOTO VIDEO */
