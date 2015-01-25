@@ -1,6 +1,7 @@
 // MAIN JavaScript
 
 var windowMaxWidth = 980;
+var arCarousel3D = [];
 
 function runAnimationSection(section) {
 	section.find(".animation-block").each(function(){
@@ -237,6 +238,29 @@ $(function(){
 		$(this).addClass("hor-list__item_active");
 	});
 	/* --END-- SERVICES */
+	
+	
+	$(".carousel-3d").each(function(index){
+		var carousel = $(".carousel-3d").waterwheelCarousel({
+			separation:320,
+			separationMultiplier:0.3,
+			opacityMultiplier:1
+		});
+		
+		$(this).data("index", index);
+		arCarousel3D.push(carousel);
+	});
+	
+	$(".carousel-3d__arrow").click(function(){
+		var parrentIndex = $(this).closest(".carousel-3d").data("index"),
+			object = arCarousel3D[parrentIndex];
+			
+		if ($(this).is(".carousel-3d__arrow_left")) {
+			object.prev();
+		} else {
+			object.next();
+		}
+	});
 });
 
 
@@ -273,6 +297,16 @@ $(window).scroll(function() {
 
 $(window).resize(function(){
 	centerPopup($(".b-popup"));
+
+	$(".carousel-3d").each(function(index){
+		var object = arCarousel3D[index];
+		
+		object.reload({
+			separation:320,
+			separationMultiplier:0.3,
+			opacityMultiplier:1
+		});
+	});
 	
 });
 
@@ -552,37 +586,5 @@ $(function(){
 		
 		return {"opacity": itemOpacity, "fontSize": fontSize}; 
 	}
-	
-	
-	
-	
-	
-	$(document).ready(function(){
-
-		/*$(".r-sections__item").animate({
-			// переместим в координату 500 по x
-			"left": "500px"
-		}, {
-
-			// функция степ вызывается на каждом шагу
-			// теперь мы можем делать свою "неповторимую" анимацию :)
-			step: function(now, fx) {
-
-				// собственно само передвижение квадрата по Y 
-				// вместо now можно и свою переменную использовать
-				$(fx.elem).offset({top: Math.sin(now/80)*200+200});
-
-
-				// дальше мы немного повыпендриваемся :)
-
-
-
-				//console.log(fx); если захотим посмотреть что у на в fx		    
-			}
-		},"slow"); */
-
-
-	});
-
 
 });
