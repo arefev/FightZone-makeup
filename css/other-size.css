@@ -516,6 +516,12 @@
 			width:23%;
 		}
 	/* --END-- FOOTER */
+	
+	/* 3D CAROUSEL */
+		.carousel-3d__item {
+			max-width:70%;
+		}
+	/* --END-- 3D CAROUSEL */
 }
 
 @media screen and (max-width: 320px) {
