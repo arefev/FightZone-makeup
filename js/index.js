@@ -249,6 +249,22 @@ $(function(){
 			object.next();
 		}
 	});
+	
+	$(".carousel-3d__link").colorbox({
+		className: "carousel-3d-colorbox",
+		innerWidth:"60%", 
+		innerHeight:"60%",
+		maxWidth: 980,
+		current: '<a href="" class="colorbox__signup-training font-bold">Записаться на тренировку</a>',
+		onComplete: function(e){
+			var element = $("#colorbox"),
+				width = element.width(),
+				windowWidth = $(window).width(),
+				left = (windowWidth - width)/2;
+				
+			element.css("left", left)
+		}
+	});
 	/* --END-- PHOTO-VIDEO */
 });
 
@@ -338,7 +354,11 @@ function get3DCarouselOpt() {
 		separationMultiplier: 0.3,
 		opacityMultiplier: 1,
 		flankingItems: 2,
-		initCenterItem: set3DCarouselArrows
+		initCenterItem: set3DCarouselArrows,
+		clickedCenter: function($clickedItem){
+			//var src = $clickedItem.attr("src");
+			//$.colorbox({html:'<img src="' + src + '" alt=""/>'});
+		}
 	};
 	
 	if (windowWidth < 480) {
