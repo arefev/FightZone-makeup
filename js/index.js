@@ -265,10 +265,30 @@ $(function(){
 			element.css("left", left)
 		}
 	});
+	
+	$(".blog__item__link").colorbox({
+		inline:true,
+		className: "carousel-3d-colorbox",
+		innerWidth:"70%", 
+		innerHeight:"70%",
+		maxWidth: 980,
+		title:false,
+		current: '<a href="" class="colorbox__signup-training font-bold">Записаться на тренировку</a>',
+		onComplete: function(e){
+			var element = $("#colorbox"),
+				width = element.width(),
+				windowWidth = $(window).width(),
+				left = (windowWidth - width)/2;
+				
+			element.css("left", left)
+		}
+	});
 	/* --END-- PHOTO-VIDEO */
 });
 
 $(window).resize(function(){
+	console.log("RESIZE");
+	$.colorbox.resize();
 	/* PHOTO-VIDEO */
 	/* sections */
 	rSectionsInit();

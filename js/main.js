@@ -118,7 +118,7 @@ $(function(){
 $(window).scroll(function() {
 	// ANIMATATE
 	var windowHeight = $(window).height();
-	var topOfWindow = $(window).scrollTop() + windowHeight - 200;
+	var topOfWindow = $(window).scrollTop() + windowHeight;
     $('.animation-block').each(function(){
         var imagePos = $(this).offset().top;
 		if (imagePos <= topOfWindow) {

@@ -1401,6 +1401,39 @@ body {
 		left:0;
 		bottom:3px;
 	}
+	
+	.blog-hidden-list .blog-hidden-list__item {
+		display:none;
+	}
+	
+	.blog-hidden-list__item {
+		width:100%;
+		max-width:662px;
+		height:516px;
+		background:#FFF;
+		margin:0 auto;
+		overflow:auto;
+		border-top:3px solid #FFF;
+		border-bottom:3px solid #FFF;
+		font-size:18px;
+	}
+	
+	.blog-hidden-list__inner {
+		padding:0 3px;
+	}
+	
+	.blog-hidden-list__item .title {
+		text-transform:uppercase;
+		font-size:18px;
+		text-align:center;
+		margin:26px 0 18px;
+	}
+	
+	.blog-hidden-list__item p {
+		
+		padding:0 44px;
+		margin:24px 0;
+	}
 /* --END-- BLOG */
 
 /* CONTACTS */

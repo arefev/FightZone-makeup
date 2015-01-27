@@ -365,6 +365,18 @@
 			display:block;
 		}
 	/* --END-- FOOTER */
+	
+	/* BLOG */
+		.blog-hidden-list__item {
+			font-size:15px;
+			height:316px;
+		}
+		
+		.blog-hidden-list__item p {
+			padding-left:12px;
+			padding-right:12px;
+		}
+	/* --END-- BLOG */
 }
 
 @media screen and (max-width: 369px) {
