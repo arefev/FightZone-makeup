@@ -270,7 +270,8 @@ $(function(){
 		inline:true,
 		className: "carousel-3d-colorbox",
 		innerWidth:"70%", 
-		innerHeight:"70%",
+		innerHeight:"100%",
+		maxHeight:516,
 		maxWidth: 980,
 		title:false,
 		current: '<a href="" class="colorbox__signup-training font-bold">Записаться на тренировку</a>',
@@ -287,8 +288,7 @@ $(function(){
 });
 
 $(window).resize(function(){
-	console.log("RESIZE");
-	$.colorbox.resize();
+
 	/* PHOTO-VIDEO */
 	/* sections */
 	rSectionsInit();

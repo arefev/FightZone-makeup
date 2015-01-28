@@ -1,6 +1,5 @@
 /* MAIN CSS */
 body {
-	background:#171613;
 	font-family:"MF_R";
 	color:#232323;
 }
@@ -12,9 +11,7 @@ body {
 		overflow:hidden;
 	}
 	
-	.main__inner_fixed {
-		position:fixed;
-	}
+	.main__inner_fixed { position:fixed; }
 	
 	.main__center {
 		max-width:980px;
@@ -26,22 +23,20 @@ body {
 		clear:both;
 	}
 	
-	.hidden {
-		display:none;
-	}
+	.hidden { display:none; }
 	
-	.animation, .animationRun {
-		visibility:hidden;
-	}
+	.animation, .animationRun { visibility:hidden; }
 	
 	.font-reg { font-family:"MF_R" }
 	.font-bold { font-family:"MF_B" }
 	.font-ibold { font-family:"MF_BI" }
 	.font-italic { font-family:"MF_I" }
 	
-	h1, h2, h3, h4, h5, h6 {
-		font-weight:normal;
-	}
+	h1, h2, h3, h4, h5, h6 { font-weight:normal; }
+	
+	a { color:#4f4f4f; }
+	
+	a:hover { text-decoration:none; }
 	
 	b, strong {
 		font-family:"MF_B";
@@ -50,9 +45,7 @@ body {
 	
 	i { font-family:"MF_I" }
 	
-	img {
-		max-width:100%;
-	}
+	img { max-width:100%; }
 	
 /* --END-- GENERAL */
 
@@ -382,6 +375,11 @@ body {
 		min-height:766px;
 		position:relative;
 		padding:0;
+		background:#171613;
+	}
+	
+	.main-slider .main__center {
+		position:relative;
 	}
 	
 	.main-slider__image {
@@ -1409,7 +1407,8 @@ body {
 	.blog-hidden-list__item {
 		width:100%;
 		max-width:662px;
-		height:516px;
+		height:100%;
+		max-height:516px;
 		background:#FFF;
 		margin:0 auto;
 		overflow:auto;
@@ -1707,3 +1706,94 @@ body {
 		-ms-transform: scale(1.3);
 	}
 /* --END-- 3D CAROUSEL */
+
+/* INNER PAGE */
+	.inner-page {
+		min-height:600px;
+		padding:74px 0 30px;
+	}
+	
+	.breadcrumbs {
+		font-size:14px;
+		color:#4f4f4f;
+		margin:0 0 9px;
+	}
+/* --END-- INNER PAGE */
+
+/* PAGE SPORT TYPE */
+	.p-sport-type p {
+		padding:0 28px;
+	}
+	
+	.p-sport-type__link {
+		color:#232323;
+		text-decoration:none;
+		text-align:center;
+		display:inline-block;
+		border:5px solid #ef7d00;
+		border-radius:3px;
+		margin:18px 0 0;
+		padding:9px 45px 10px 46px;
+	}
+
+	/* TRAINER LIST */
+		.trainer-list {
+			background:url("../images/trainer-list-bg.jpg") no-repeat #040404;
+			color:#FFF;
+		}
+		
+		.trainer-list__item {
+			padding:35px 0 40px;
+			margin:0 30px;
+			border-top:1px solid #FFF;
+		}
+		
+		.trainer-list__item:first-child {
+			border-top:0;
+		}
+		
+		.trainer-list__left {
+			float:left;
+		}
+		
+		.trainer-list__right {
+			float:right;
+		}
+		
+		.trainer-list__photo {
+			float:left;
+			border-radius:100%;
+		}
+		
+		.trainer-list .teachers__info {
+			max-width:626px;
+		}
+		
+		.trainer-list .teachers__title {
+			font-size:30px;
+			line-height:25px;
+		}
+		
+		.trainer-list .teachers__age {
+			font-size:18px;
+			margin:0;
+		}
+		
+		.teachers__title__white {
+			color:#FFF;
+		}
+		
+		.trainer-list .p-sport-type__link {
+			color:#FFF;
+			margin:0;
+		}
+		
+		.trainer-list .teachers__achiev {
+			margin-bottom:24px;
+		}
+		
+		.trainer-list .teachers__achiev__item {
+			max-width:322px;
+		}
+	/* --END-- TRAINER LIST */
+/* --END-- PAGE SPORT TYPE */
