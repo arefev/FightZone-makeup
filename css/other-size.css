@@ -140,6 +140,18 @@
 }
 
 @media screen and (max-width: 570px) { 
+	/* ADVANTAGES */
+		.advantages {
+			padding-left:44px;
+			padding-right:44px;
+			margin-top:66px;
+		}
+		
+		.advantages__desc {
+			display:none;
+		}
+	/* --END-- ADVANTAGES */
+		
 	/* FIGHTING STARS */
 		.fighting-stars__main {
 			margin-left:19px;
@@ -255,8 +267,8 @@
 		
 		/* ADVANTAGES */
 			.advantages {
-				padding-left:12px;
-				padding-right:12px;
+				padding-left:2px;
+				padding-right:2px;
 				margin-top:66px;
 			}
 			

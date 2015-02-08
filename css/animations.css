@@ -54,6 +54,59 @@ slideDown
 
 /*
 ==============================================
+slideDownShowFromTop
+==============================================
+*/
+
+.slideDownShowFromTop {
+	animation-name: slideDownShowFromTop;
+	-webkit-animation-name: slideDownShowFromTop;	
+
+	animation-duration: 0.5s;	
+	-webkit-animation-duration: 0.5s;
+
+	animation-timing-function: ease;	
+	-webkit-animation-timing-function: ease;	
+
+	visibility: visible !important;						
+}
+
+@keyframes slideDownShowFromTop {
+	0% {
+		transform: translateY(0%);
+	}
+	35% {
+		opacity:0;
+		transform: translateY(100%);
+	}
+	70% {
+		opacity:0;
+		transform: translateY(-100%);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+
+@-webkit-keyframes slideDownShowFromTop {
+	0% {
+		-webkit-transform: translateY(0%);
+	}
+	35% {
+		opacity:0;
+		-webkit-transform: translateY(100%);
+	}
+	70% {
+		opacity:0;
+		-webkit-transform: translateY(-100%);
+	}
+	100% {
+		-webkit-transform: translateY(0);
+	}
+}
+
+/*
+==============================================
 slideUp
 ==============================================
 */
@@ -241,11 +294,6 @@ rotate3D
 ==============================================
 */
 .rotate3DFadeIn {
-	/*transition: all 1s ease-in;
-	-webkit-transition: all 1s ease-in;
-	-moz-transition: all 1s ease-in;
-	-o-transition: all 1s ease-in;*/
-	
 	visibility: visible !important;	
 	
 	animation-name: rotate3DFadeIn;
@@ -262,10 +310,7 @@ rotate3D
 	0% {
 		transform: scale(0);
 		opacity: 0.0;	
-		transform: rotateY(0deg);
-	}
-	50% {
-		transform: rotateY(180deg);
+		transform: rotateY(260deg);
 	}
 	100% {
 		transform: scale(1);
@@ -277,11 +322,8 @@ rotate3D
 @-webkit-keyframes rotate3DFadeIn {
 	0% {
 		-webkit-transform: scale(0);
-		-webkit-transform: rotateY(0deg);		
+		-webkit-transform: rotateY(260deg);
 		opacity: 0.0;	
-	}
-	50% {
-		-webkit-transform: rotateY(180deg);
 	}
 	100% {
 		-webkit-transform: scale(1);

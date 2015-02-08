@@ -255,7 +255,7 @@ $(function(){
 		innerWidth:"60%", 
 		innerHeight:"60%",
 		maxWidth: 980,
-		current: '<a href="" class="colorbox__signup-training font-bold">Записаться на тренировку</a>',
+		current: '<a href="" class="colorbox__signup-training anim-fill-orange font-bold">Записаться на тренировку</a>',
 		onComplete: function(e){
 			var element = $("#colorbox"),
 				width = element.width(),
@@ -274,7 +274,7 @@ $(function(){
 		maxHeight:516,
 		maxWidth: 980,
 		title:false,
-		current: '<a href="" class="colorbox__signup-training font-bold">Записаться на тренировку</a>',
+		current: '<a href="" class="colorbox__signup-training anim-fill-orange font-bold">Записаться на тренировку</a>',
 		onComplete: function(e){
 			var element = $("#colorbox"),
 				width = element.width(),
