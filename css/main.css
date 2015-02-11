@@ -1031,11 +1031,11 @@ body {
 			transform:none;
 		}
 		
-		.hor-list__item_width_1 { min-width:125px; }
+		.hor-list__item_width_1 { min-width:122px; }
 		.hor-list__item_width_2 { min-width:92px; }
-		.hor-list__item_width_3 { min-width:104px; }
+		.hor-list__item_width_3 { min-width:100px; }
 		.hor-list__item_width_4 { min-width:130px; }
-		.hor-list__item_width_5 { min-width:278px; }
+		.hor-list__item_width_5 { min-width:258px; }
 		
 		.hor-list__bg {
 			height:39px;
