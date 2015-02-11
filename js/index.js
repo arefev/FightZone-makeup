@@ -8,6 +8,14 @@ $(function(){
 	MAIN SLIDER
 	отслеживаем события на клик стрелочек и пагинации
 	*/
+	$(".main-slider__text").each(function(index){
+		var active = '';
+		if (index <= 0) {
+			active = ' main-slider__nav__item_active';
+		}
+		$(".main-slider__nav").append('<span class="main-slider__nav__item' + active + '"></span>');
+	});
+	
 	$(".main-slider__arrow_right, .main-slider__arrow_left, .main-slider__nav__item").click(function(){
 		if ($(this).is(".main-slider__nav__item_active")) {
 			return false;
