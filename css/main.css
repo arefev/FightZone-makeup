@@ -1194,6 +1194,7 @@ body {
 	
 	.teachers__schedule__list {
 		margin:10px 20% 0 0;
+		text-align:right;
 	}
 	
 	.teachers__schedule__item {
@@ -1828,6 +1829,11 @@ body {
 			color:#FFF;
 		}
 		
+		.trainer-list__title {
+			background:#FFF;
+			padding:0 0 30px;
+		}
+		
 		.trainer-list__item {
 			padding:35px 0 40px;
 			margin:0 30px;
@@ -1849,6 +1855,14 @@ body {
 		.trainer-list__photo {
 			float:left;
 			border-radius:100%;
+		}
+		
+		.trainer-list__photo img {
+			border-radius:100%;
+		}
+		
+		.trainer-list .teachers__schedule__list {
+			text-align:left;
 		}
 		
 		.trainer-list .teachers__info {
