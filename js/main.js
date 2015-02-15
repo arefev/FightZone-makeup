@@ -178,6 +178,12 @@ $(function(){
 		});
 	});
 	/* --END-- FADE-IN SLIDER */
+	
+	/* POPUP */
+		$(".popup__close, #windowFill").click(function(){
+			hidePopup($(this).closest(".popup"));
+		});
+	/* --END-- POPUP */
 });
 
 
@@ -213,7 +219,7 @@ $(window).scroll(function() {
 
 
 $(window).resize(function(){
-	centerPopup($(".b-popup"));
+	centerPopup($(".popup"));
 });
 
 function showPopup(element)
@@ -228,7 +234,7 @@ function hidePopup(element)
 {
 	if (!element.length)
 	{
-		element = $(".b-popup:visible");
+		element = $(".popup:visible");
 	}
 	
 	element.hide();

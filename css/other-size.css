@@ -228,6 +228,16 @@
 			margin:20px auto 0;
 		}
 	/* --END-- BLOG */
+	
+	/* POPUP TRAINER */
+		.popup-trainer__image {
+			display:none;
+		}
+		
+		.popup-trainer__right {
+			margin-left:20%;
+		}
+	/* --END-- POPUP TRAINER */
 }
 
 
@@ -551,6 +561,13 @@
 			max-width:70%;
 		}
 	/* --END-- 3D CAROUSEL */
+	
+	/* POPUP */
+		.popup__close {
+			right:0;
+			top:-32px;
+		}
+	/* --END-- POPUP */
 }
 
 @media screen and (max-width: 320px) {

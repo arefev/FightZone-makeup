@@ -30,6 +30,47 @@
 <body>
 	
 	<div class="main">
+		<div class="window-fill" id="windowFill"></div>
+	
+		<div class="popup popup_order-call" id="orderCall">
+			<div class="popup-in">
+				<div class="popup__close"></div>
+				
+				<div class="popup-trainer">
+					<div class="popup-trainer__image"><img src="images/temp/pic_15.png" alt=""/></div>
+					<div class="popup-trainer__right">
+						<div class="popup-trainer__name font-ibold">Ярослав <span class="popup-trainer__name_orange">Ремыга</span></div>
+						<div class="popup-trainer__text font-italic">"Ты в одном шаге от нового себя"</div>
+					</div>
+					<div class="clear"></div>
+				</div>
+				
+				<div class="popup-content">
+					<form action="">
+						<input type="text" placeholder="Имя" class="input-text"/>
+						<input type="text" placeholder="Номер телефона" class="input-text"/>
+						<div class="line-text"><span class="line-text__text">или</span></div>
+						<input type="text" placeholder="Электронная почта" class="input-text"/>
+						<label class="check-agreement"><input type="checkbox" />Я согласен с <a href="#" title="Пользовательское соглашение">Пользовательским соглашением</a></label>
+						<input type="submit" class="btn-submit-orange font-bold anim-slide-top"/>
+					</form>
+				</div>
+			</div>
+		</div> <!-- end b-popup -->
+		
+		<div class="popup popup_result" id="result">
+			<div class="popup-in">
+				<div class="popup__close"></div>
+				
+				<div class="popup-content">
+					<div class="popup__title">Ваша заявка отправлена!</div>
+					<center>Мы обязательно свяжемся с Вами<br/>
+						в ближайшее время<br/>
+						по указанным контактам</center>
+				</div>
+			</div>
+		</div> <!-- end b-popup -->
+		
 		<div class="top-menu_hidden">
 			<div class="top-menu__close"></div>
 		</div>
@@ -66,7 +107,7 @@
 			
 			<div class="header__bottom animation-block" data-animation-class="slideLeft" data-animation-timestart="1800">
 				<div class="main__center">
-					<div class="callback-button anim-slide-top animation"><span class="callback-button__border">Обратный звонок</span></div>
+					<div class="callback-button anim-slide-top animation" onclick="showPopup($('#orderCall'))"><span class="callback-button__border">Обратный звонок</span></div>
 					<div class="header__number animation"><a href="#" title="">8 495 363 41 72</a></div>
 					<div class="clear"></div>
 				</div>
@@ -1250,9 +1291,13 @@
 						</div>
 						
 						<div class="footer__social">
-							<div class="footer__social__item">
-								<img src="images/temp/pic_7.jpg" alt=""/>
-							</div>
+							<a href="#" title="" class="footer__social__item footer__social__item_fb"></a>
+							<a href="#" title="" class="footer__social__item footer__social__item_tw"></a>
+							<a href="#" title="" class="footer__social__item footer__social__item_youtube"></a>
+							<a href="#" title="" class="footer__social__item footer__social__item_v"></a>
+							<a href="#" title="" class="footer__social__item footer__social__item_inst"></a>
+							
+							<div class="clear"></div>
 							<a href="#" title="" class="dev-3core-logo"><img src="images/3core-logo.png" alt=""/></a>
 						</div>
 						<div class="clear"></div>
