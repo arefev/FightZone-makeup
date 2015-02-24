@@ -157,9 +157,24 @@
 			margin-left:19px;
 		}
 		
+		.index-section.fighting-stars {
+			min-height:1000px;
+			background-size:auto 100%;
+		}
+		
 		.stars-list {
+			max-height:100%;
 			margin-top:5px;
 			margin-left:19px;
+			overflow:visible;
+		}
+		
+		.stars-list__item {
+			margin-bottom:20px;
+		}
+		
+		.stars-list__desc {
+			display:none;
 		}
 	/* --END-- FIGHTING STARS */
 	
@@ -254,10 +269,6 @@
 	/* --END-- HEADER */
 	
 	/* MAIN SLIDER */
-		.main-slider__image {
-			background-position:-150px 0;
-		}
-		
 		.main-slider__item__inner {
 			padding:124px 44px 0 68px;
 		}
@@ -343,6 +354,16 @@
 		/* --END-- SCHEDULE TABLE INFO */
 	/* --END-- SCHEDULE */
 	
+	/* TEACHERS */
+		.teachers__title {
+			margin-bottom:52px;
+		}
+		
+		.teachers__age {
+			display:none;
+		}
+	/* --END-- TEACHERS */
+	
 	/* MORE INFO */
 		.more-info .advantages {
 			margin-top:48px;
@@ -417,10 +438,6 @@
 	/* --END-- HEADER */
 	
 	/* MAIN SLIDER */
-		.main-slider__image {
-			background-position:-250px 0;
-		}
-		
 		.main-slider__left {
 			margin:40px 0 0;
 		}
@@ -434,6 +451,27 @@
 			padding-left:36px;
 		}
 	/* --END-- MAIN SLIDER */
+	
+	/* ADVANTAGES */
+		.advantages {
+			height:105px;
+			overflow:hidden;
+			padding-bottom:0;
+			text-align:center;
+		}
+		
+		.advantages__item {
+			display:none;
+		}
+		
+		.advantages__item:nth-child(1),
+		.advantages__item:nth-child(2),
+		.advantages__item:nth-child(4) {
+			float:none;
+			display:inline-block;
+			margin-bottom:20px;
+		}
+	/* --END-- ADVANTAGES */
 	
 	/* FIGHTING STARS */
 		.fighting-stars__main {

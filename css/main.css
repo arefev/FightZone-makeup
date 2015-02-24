@@ -618,6 +618,7 @@ body {
 		width:100%;
 		height:100%;
 		background-repeat:no-repeat;
+		background-position:top center;
 		position:absolute;
 		top:0;
 		left:0;
@@ -1439,6 +1440,11 @@ body {
 	.services-calc__item {
 		margin:0 0 14px;
 	}
+	
+	.services-calc__item_noactive {
+		opacity:0.5;
+		filter:alpha(opacity=50);
+	}
 		
 	.services-calc__item_noactive .hor-list__item {
 		cursor:default;
@@ -1498,15 +1504,15 @@ body {
 	
 	.services-special {
 		margin:30px 0 0;
+		text-align:center;
 	}
 	
 	.services-special__item {
 		width:319px;
 		height:145px;
-		float:left;
 		position:relative;
-		margin:0 0 0 11px;
-		display:block;
+		margin:0 0 0 7px;
+		display:inline-block;
 		color:#1a1a1a;
 		text-decoration:none;
 		
