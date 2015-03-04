@@ -177,6 +177,10 @@ $(function(){
 			slider.removeClass("active");
 		});
 	});
+	
+	setInterval(function(){
+		$(".fade-in-slider__arrow_right, .main-slider__arrow_right").click();
+	}, 10000);
 	/* --END-- FADE-IN SLIDER */
 	
 	/* POPUP */
